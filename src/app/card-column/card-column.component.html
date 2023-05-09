@@ -1,0 +1,11 @@
+<div class="card-column" [ngStyle]="{'height.px': height, 'margin-top.rem': marginTop}">
+  <!-- Heading part -->
+  <div class="card-column__title-container"> 
+    <h1 class="card-column__title">{{ title }}</h1>
+  </div>
+  
+  <!-- Cards Container -->
+  <div>
+    <ng-content></ng-content>
+  </div>
+</div>
