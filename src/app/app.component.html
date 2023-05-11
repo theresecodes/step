@@ -1,9 +1,21 @@
 <div class="app">
   <div class="column-containers">
     <div>
-      <app-card-column [title]="'Currently Doing'" [height]="240"></app-card-column>
-      <app-card-column [title]="'Paused'" [height]="345" [marginTop]="1" ></app-card-column>
+      <app-card-column [title]="'Currently Doing'" [height]="240">
+        <div *ngFor="let task of doingTasks">
+          <app-view-task [task]="task"></app-view-task>
+        </div>
+      </app-card-column>
+      <app-card-column [title]="'Paused'" [height]="345" [marginTop]="1" >
+        <div *ngFor="let task of pausedTasks">
+          <app-view-task [task]="task"></app-view-task>
+        </div>
+      </app-card-column>
     </div>
-    <app-card-column [title]="'Done'"></app-card-column>
+    <app-card-column [title]="'Done'">
+      <div *ngFor="let task of doneTasks">
+        <app-view-task [task]="task"></app-view-task>
+      </div>
+    </app-card-column>
   </div>
 </div>

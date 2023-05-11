@@ -14,4 +14,8 @@
     text-align: center;
     color: #36454f;
   }
+
+  &__body {
+    overflow-y: auto;
+  }
 }

@@ -9,5 +9,4 @@ export class CardColumnComponent {
   @Input({ required: true }) title = '';
   @Input({ required: false }) height = 600;
   @Input({ required: false }) marginTop = 4.5;
-
 }
