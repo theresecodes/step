@@ -1,0 +1,24 @@
+<div>
+  <mat-dialog-content class="textarea-container">
+    <mat-form-field class="task-input" appearance="outline">
+      <textarea
+        matInput
+        cdkTextareaAutosize
+        [(ngModel)]="data.title"></textarea>
+    </mat-form-field>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions align="end" class="mat-typography">
+    <button
+      mat-button
+      mat-dialog-close
+      (click)="dialogRef.close()">Cancel</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+      (click)="dialogRef.close(data)">Save</button>
+  </mat-dialog-actions>
+</div>
+
