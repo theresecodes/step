@@ -1,11 +1,32 @@
 .view-task {
   border-radius: 5px;
-  margin: 0.5rem 0.8rem;
+  margin: 1rem 0.8rem;
   min-height: 3rem;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 1.3rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: relative;
+
+  .view-task__edit-icon {
+    display: none;
+   }
+
+  &:hover {
+    cursor: pointer;
+
+    .view-task__edit-icon {
+      display: block;
+      position: absolute;
+      right: -4px;
+    }
+  }  
 
   &__title {
     font-size: small;
+    line-height: 1.8;
+  }
+
+  .edit-icon-size {
+    font-size: 15px;
+    color: #c0c0c0;
   }
 }

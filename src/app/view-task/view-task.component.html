@@ -1,3 +1,3 @@
-<div class="view-task">
-  <p class="view-task__title">{{ task.title }}</p>
+<div #taskDiv class="view-task" mat-button (click)="openEditTask()">
+  <p class="view-task__title" [innerHTML]="task.title"></p>
 </div>
